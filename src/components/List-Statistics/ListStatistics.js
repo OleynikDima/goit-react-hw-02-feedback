@@ -9,7 +9,7 @@ function ListStatistics({good,neutral,bad,total,positive}){
                 <li className={style.item}>Neutral:{neutral} </li>
                 <li className={style.item}>Bad: {bad}</li>
                 <li className={style.item}>Total:{total} </li>
-                <li className={style.item}>Positive Feedback: {positive}%</li>
+                <li className={style.item}>Positive Feedback: {positive}</li>
             </ul> 
     )
 }
@@ -25,7 +25,7 @@ ListStatistics.PropsTypes={
     neutral:PropsTypes.string.isRequired,
     bad:PropsTypes.string.isRequired,
     total:PropsTypes.number.isRequired,
-    positive:PropsTypes.number.isRequired,
+    positive:PropsTypes.number,
 }
 
 

@@ -7,10 +7,6 @@ import ListStatistics from './List-Statistics/ListStatistics'
 import Notification from './Notification/Notification'
 
 
-
-
-
-
 class  App extends Component {
 
   static defaultProps = {
@@ -18,6 +14,7 @@ class  App extends Component {
     good: 0,
     neutral: 0,
     bad: 0,
+    //total
   };
 
   state = {
@@ -27,7 +24,7 @@ class  App extends Component {
   };
 
 
-  
+  // Events Button
   onLeaveFeedback = (e) => {
     const dataName = e.target.dataset.name 
     this.setState((prevState,props) => {
@@ -40,13 +37,13 @@ class  App extends Component {
 
      
 } 
-
+//count the state.object
 countTotalFeedback(state){
   return Object.values(state).reduce((arr,value)=> arr+= value);  
 }
-
+//count percentage good feedback
 countPositiveFeedbackPercentage(good ,total){
-  return  Math.floor(good/total*100)
+  return  Math.floor(good/total*100) + '%'
 }
 
 
